@@ -1,0 +1,39 @@
+.container {
+    max-width: 46rem;
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.containerContentTask {
+    border-top: 1px solid var(--cinza-300);
+    border-radius: 8px;
+
+    margin-top: 1.5625rem;
+}
+
+.containerContentTask img {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.containerContentTask h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 140%;
+
+    color: var(--cinza-100);
+
+    margin-bottom: 1.5px;
+}
+
+.containerContentTask p {
+    font-weight: 500;
+    color: var(--cinza-100);
+}

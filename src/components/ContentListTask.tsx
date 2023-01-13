@@ -99,6 +99,7 @@ export function ContentListTak() {
                                     <ContentTask
                                         id={task.id}
                                         task={task.content}
+                                        isTaskCompleted={task.isTaskCompleted}
                                         handleDeleteTask={handleDeleteTask}
                                         handleTaskToggle={handleTaskToggle}
                                     />

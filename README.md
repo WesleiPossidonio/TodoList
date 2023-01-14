@@ -4,7 +4,7 @@
 no React </h3>
 
 <h1>
-    <img width="965px" src=".src/assets/img-readme.png" alt="Foto-todoList">
+    <img width="965px" src="./src/assets/img-readme.png" alt="Foto-todoList">
 </h1>
 
  # Demonstração

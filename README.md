@@ -17,8 +17,8 @@ no React </h3>
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-- HTML
-- CSS
+- React
+- CSS Module
 - TypeScript 
 
 ---

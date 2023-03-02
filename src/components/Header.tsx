@@ -1,4 +1,4 @@
-import Styles from './header.module.css'
+import Styles from './Header.module.css'
 import TodoListLogo from '../assets/Logo-TodoList.svg'
 
 export const Header = () => {

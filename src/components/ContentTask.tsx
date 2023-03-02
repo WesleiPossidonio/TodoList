@@ -3,11 +3,11 @@ import Trash from '../assets/trash.svg'
 
 
 interface PropsTasks {
-  id: String;
-  task: String;
-  isTaskCompleted: Boolean;
-  handleDeleteTask: (id: String) => void;
-  handleTaskToggle: (id: String) => void;
+  id: string;
+  task: string;
+  isTaskCompleted: boolean;
+  handleDeleteTask: (id: string) => void;
+  handleTaskToggle: (id: string) => void;
 }
 
 const ContentTask = ({ id, task, isTaskCompleted, handleDeleteTask, handleTaskToggle }: PropsTasks) => {

@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
-import styles from './ContentLIstTask.module.css'
+import styles from './ContentListTask.module.css'
 import imgButton from '../assets/plus.svg'
 
 import * as UUID from 'uuid'
@@ -9,7 +9,7 @@ import ContentTask from "./ContentTask";
 interface ListTask {
     id: string;
     content: string;
-    isTaskCompleted: Boolean;
+    isTaskCompleted: boolean;
 }
 
 export function ContentListTak() {

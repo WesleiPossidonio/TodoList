@@ -9,7 +9,7 @@ import ContentTask from "./ContentTask";
 interface ListTask {
     id: string;
     content: string;
-    isTaskCompleted: boolean;
+    isTaskCompleted: Boolean;
 }
 
 export function ContentListTak() {

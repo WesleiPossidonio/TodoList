@@ -17,7 +17,7 @@ const ContentTask = ({ id, task, isTaskCompleted, handleDeleteTask, handleTaskTo
         <div className={styles.task}>
           <input readOnly id='checkBox' type="checkbox" onClick={() => handleTaskToggle(id) } />
           <label htmlFor="checkBox"> </label>
-          <p className={isTaskCompleted && styles.isCompleted}>{task}</p>
+          <p className={isTaskCompleted ? styles.isCompleted : ''}>{task}</p>
         </div>
         <img src={Trash} alt="" onClick={() => handleDeleteTask(id)} />
       </div>

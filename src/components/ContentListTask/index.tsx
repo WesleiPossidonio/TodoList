@@ -67,8 +67,6 @@ export function ContentListTak() {
     function handleDeleteTask(id: string) {
         const removeTask = tasks.filter((task) => task.id !== id)
 
-        localStorage.removeItem(TASK_LIST_STORAGE_KAY)
-
         setTasks(removeTask);
     }
 

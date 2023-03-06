@@ -1,10 +1,10 @@
-import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
+import { ChangeEvent, FormEvent, InvalidEvent, useState, useEffect } from "react";
 import styles from './ContentLIstTask.module.css'
-import imgButton from '../assets/plus.svg'
+import imgButton from '../../assets/plus.svg'
 
 import * as UUID from 'uuid'
-import { EmptyContentTask } from "./EmptyContentTask";
-import ContentTask from "./ContentTask";
+import { ContentTask, EmptyContentTask } from "./components";
+
 
 interface ListTask {
     id: string;
@@ -16,6 +16,17 @@ export function ContentListTak() {
     const [tasks, setTasks] = useState<ListTask[]>([]);
     const [newTask, setNewTask] = useState("");
 
+    const TASK_LIST_STORAGE_KAY = 'TodoList:List'
+
+    useEffect(() => {
+     const storageList = localStorage.getItem(TASK_LIST_STORAGE_KAY)
+
+     if(storageList) {
+        setTasks([JSON.parse(storageList)])
+     }
+     
+    }, [])
+
     function handleCreateNewTask(event: FormEvent) {
         event.preventDefault();
         const createNewListTask: ListTask = {
@@ -23,6 +34,8 @@ export function ContentListTak() {
             content: newTask,
             isTaskCompleted: false
         }
+
+        localStorage.setItem(TASK_LIST_STORAGE_KAY, JSON.stringify(createNewListTask))
 
         setTasks([...tasks, createNewListTask]);
 
@@ -36,6 +49,7 @@ export function ContentListTak() {
     function handleNewTaskChange(event: ChangeEvent<HTMLInputElement>) {
         event.target.setCustomValidity("");
         setNewTask(event.target.value)
+
     }
 
     function handleTaskToggle(id: string) {

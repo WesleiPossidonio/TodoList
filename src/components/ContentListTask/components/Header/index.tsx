@@ -1,5 +1,5 @@
 import Styles from './header.module.css'
-import TodoListLogo from '../assets/Logo-TodoList.svg'
+import TodoListLogo from '../../../../assets/Logo-TodoList.svg'
 
 export const Header = () => {
   return (

@@ -1,5 +1,5 @@
 import styles from './EmptyContent.module.css'
-import imgContentTask from '../assets/Clipboard.svg'
+import imgContentTask from '../../../../assets/Clipboard.svg'
 
 export const EmptyContentTask = () => {
   return (

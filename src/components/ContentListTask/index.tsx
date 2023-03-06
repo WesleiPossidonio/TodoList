@@ -22,7 +22,7 @@ export function ContentListTak() {
      const storageList = localStorage.getItem(TASK_LIST_STORAGE_KAY)
 
      if(storageList) {
-        setTasks([JSON.parse(storageList)])
+        setTasks(JSON.parse(storageList))
      }
 
     }, [])
@@ -35,9 +35,9 @@ export function ContentListTak() {
             isTaskCompleted: false
         }
 
-        localStorage.setItem(TASK_LIST_STORAGE_KAY, JSON.stringify(createNewListTask))
-
         setTasks([...tasks, createNewListTask]);
+
+        localStorage.setItem(TASK_LIST_STORAGE_KAY, JSON.stringify([...tasks, createNewListTask]))
 
         setNewTask("");
     }
@@ -61,11 +61,15 @@ export function ContentListTak() {
 
         newTaskList[taskIndex].isTaskCompleted = !newTaskList[taskIndex].isTaskCompleted
 
+        localStorage.setItem(TASK_LIST_STORAGE_KAY, JSON.stringify(newTaskList))
+
         setTasks(newTaskList);
     }
 
     function handleDeleteTask(id: string) {
         const removeTask = tasks.filter((task) => task.id !== id)
+
+        localStorage.setItem(TASK_LIST_STORAGE_KAY, JSON.stringify(removeTask))
 
         setTasks(removeTask);
     }

@@ -1,10 +1,10 @@
+
 import { ChangeEvent, FormEvent, InvalidEvent, useState, useEffect } from "react";
 import styles from './ContentLIstTask.module.css'
 import imgButton from '../../assets/plus.svg'
 
 import * as UUID from 'uuid'
 import { ContentTask, EmptyContentTask } from "./components";
-
 
 interface ListTask {
     id: string;

@@ -17,7 +17,10 @@ export const ContentTask = ({ id, task, isTaskCompleted, handleDeleteTask, handl
     <div className={styles.container}>
       <div className={styles.contentTask}>
         <div className={styles.task}>
-          <button  id='checkBox' className={styles.contentButtonTask}  onClick={() => handleTaskToggle(id) }> {isTaskCompleted ? <BsFillCheckCircleFill /> : <div />}</button>
+          <button  id='checkBox' className={styles.contentButtonTask}
+             onClick={() => handleTaskToggle(id) }>
+             {isTaskCompleted ? <BsFillCheckCircleFill />: <div />}
+          </button>
           <p className={isTaskCompleted && styles.isCompleted}>{task}</p>
         </div>
         <img src={Trash} alt="" onClick={() => handleDeleteTask(id)} />

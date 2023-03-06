@@ -1,6 +1,6 @@
 
 import { ChangeEvent, FormEvent, InvalidEvent, useState, useEffect } from "react";
-import styles from './ContentLIstTask.module.css'
+import styles from './ContentListTask.module.css'
 import imgButton from '../../assets/plus.svg'
 
 import * as UUID from 'uuid'

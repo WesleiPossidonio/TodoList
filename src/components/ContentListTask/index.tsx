@@ -23,8 +23,6 @@ export function ContentListTak() {
 
      if(storageList) {
         setTasks([JSON.parse(storageList)])
-        const test = 'test'
-        console.log(test)
      }
 
     }, [])
